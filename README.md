@@ -19,6 +19,10 @@ Install dependencies:
 ```
 pip install -r requirements.txt
 ```
+
+> **Note:** Python 3.12+ no longer ships `distutils`. The project pins `setuptools` in `requirements.txt` so that the vendored
+> `setuptools._distutils` module is available and PyCharm/Pip installs do not fail with `ModuleNotFoundError: No module named
+> 'distutils'`. Install the requirements in a virtual environment to pick this up automatically.
 Run tests:
 ```
 pytest
